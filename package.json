@@ -1,7 +1,7 @@
 {
-    "name": "mosaic-efg",
+    "name": "boilerplate-react-only",
     "version": "1.0.0",
-    "description": "The frontend client repository for Mosaic's EFG module",
+    "description": "Boilerplate for React Standalone Apps",
     "main": "index.js",
     "scripts": {
         "test": "test",
@@ -9,11 +9,12 @@
         "start": "webpack serve --mode=development"
     },
     "keywords": [
-        "efg",
-        "mosaic"
+        "boilerplate",
+        "reactjs",
+        "react"
     ],
     "author": "Dharani Ijjarothu",
-    "license": "UNLICENSED",
+    "license": "MIT",
     "dependencies": {
         "@babel/core": "^7.17.5",
         "@babel/plugin-transform-runtime": "^7.17.0",

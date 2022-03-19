@@ -1,4 +1,4 @@
-# FRONTEND SETUP FOR EFG MODULE
+# FRONTEND SETUP FOR Boilerplate React Standalone App
 
 ## This file contains meta info and some notes, checklists, logs etc about the app
 
@@ -17,3 +17,4 @@
 - [ ] Overlay setup
 - [ ] PWA Setup
 - [ ] Proper PWA go-back functioning
+- [ ] React Helmet, META descriptions
