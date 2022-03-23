@@ -1,6 +1,8 @@
 import React from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import LandingPage from '../pages/LandingPage';
 import TestPage from '../pages/TestPage';
+import PageRoutes from './PageRoutes';
 
 const AppRouter = () => {
 
@@ -9,11 +11,7 @@ const AppRouter = () => {
                 <Routes>
                     <Route path="/*" element={ //main route
                         <div className='base-wrapper'>
-                            <Routes>
-                                <Route path="/" element={ //sub route
-                                    <TestPage />
-                                } />
-                            </Routes>
+                            <PageRoutes />
                         </div>
                     } />
                 </Routes>

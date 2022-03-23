@@ -2,13 +2,17 @@
 
 @import "./base/_reset.scss";
 @import "./fonts/interweb/inter.css";
+@import "./fonts/robotoweb/stylesheet.css";
+@import "./fonts/georamaweb/stylesheet.css";
 @import "./base/settings.scss";
 @import "./base/_base.scss";
 
 // components
+@import "./components/_header.scss";
 
 //
 
 // pages
+@import "./pages/_landing-page.scss";
 
 //
