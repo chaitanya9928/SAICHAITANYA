@@ -73,7 +73,7 @@ const TextSwapWidget = ({textClass:tc, textList}) => {
     }, []);
 
     return (
-        <div className='scroll-text-container'>
+        <div className='scrolltext-container'>
             <div className={tc} style={{marginRight: '0.3em'}}>
                 {"Make"}
             </div>
