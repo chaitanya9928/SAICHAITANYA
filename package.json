@@ -1,12 +1,12 @@
 {
-    "name": "boilerplate-react-only",
+    "name": "slots-machine",
     "version": "1.0.0",
-    "description": "Boilerplate for React Standalone Apps",
+    "description": "A random slot machine game, there's no UI, please pretend you see a slot machine.",
     "main": "index.js",
     "scripts": {
         "test": "test",
         "start1": "webpack-dev-server --config webpack.config.js --hot",
-        "start": "webpack serve --mode=development"
+        "start": "webpack build --hot --watch --mode=development"
     },
     "keywords": [
         "boilerplate",
@@ -31,7 +31,25 @@
         "style-loader": "^3.3.1",
         "webpack": "^5.69.1",
         "webpack-dev-server": "^4.7.4",
-        "webpack-server": "^0.1.2"
+        "webpack-server": "^0.1.2",
+        "express": "^4.17.1",
+        "express-session": "^1.17.1",
+        "extract-text-webpack-plugin": "3.0.2",
+        "file-loader": "^6.0.0",
+        "firebase": "^7.11.0",
+        "history": "^4.10.1",
+        "immutability-helper": "^3.0.2",
+        "jimp": "^0.16.1",
+        "lodash": "^4.17.15",
+        "moment": "2.24.0",
+        "mongoose": "^5.9.18",
+        "nanoid": "^3.1.22",
+        "normalize.css": "^8.0.1",
+        "numeral": "^2.0.6",
+        "passport": "^0.4.1",
+        "passport-google-oauth20": "^2.0.0",
+        "postcss-loader": "^3.0.0",
+        "query-string": "^7.0.0"
     },
     "devDependencies": {
         "@pmmmwh/react-refresh-webpack-plugin": "^0.5.4",
