@@ -20,7 +20,6 @@ const textList = [
 const TextSwapWidget = ({textClass:tc, textList}) => {
 
     const cont = useRef(null);
-    
     const pre = 'scrolltext-pre';
     const mid = 'scrolltext-mid';
     const post = 'scrolltext-post';
@@ -38,27 +37,38 @@ const TextSwapWidget = ({textClass:tc, textList}) => {
         a.classList.add(tc);
         cont.current.prepend(a);
     }
-    const [scrollTextValue, setScrollTextValue] = React.useState(0);
     const ref_scrollIndex = React.useRef(1);
     const showAll = false;
     const scrollDown = () => {
-        // insertText(pre, 'Smart Investments PRE')
+        //insert the text above the middle text
         insertText(pre, textList[ref_scrollIndex.current]);
-        setScrollTextValue(scrollTextValue + 1);
+        //decide next text to be shown
         ref_scrollIndex.current = (ref_scrollIndex.current + 1) % textList.length;
         setTimeout(() => {
+            //make top pre div element slide to mid
             removeClass(pre, 0);
             addClass(mid, 0);
+            //make mid div element slide to bottom (post)
             removeClass(mid, 1);
             addClass(post, 1);
+            setTimeout(() => {
+                cont.current.children[1].remove();
+            }, 1000);
         }, 100);
     }
 
     useEffect(()=>{
-        setInterval(()=>{
-            // cont.current.children[0].classList.remove('scrolltext-pre');
-            // cont.current.children[0].classList.add('scrolltext-mid');
-            scrollDown();
+        const a = setInterval(()=>{
+            if(cont.current){
+                if(cont.current.children.length === 1){
+                    scrollDown();
+                }else{
+                    console.log(cont.current.children.length)
+                }
+            }else{
+                console.log('clearing interval')
+                clearInterval(a);
+            }
         }, 2000);
     }, []);
 
@@ -68,15 +78,9 @@ const TextSwapWidget = ({textClass:tc, textList}) => {
                 {"Make"}
             </div>
             <div className='scrolltext-display' style={{overflowY: showAll?'visible':'hidden'}} ref={cont}>
-                {/* <div className={'scrolltext-pre '+tc}>
-                    Smart Investments PRE
-                </div> */}
                 <div className={'scrolltext-mid '+tc}>
                     {textList[0]}
                 </div>
-                {/* <div className={'scrolltext-post '+tc}>
-                    Smart Investments POST
-                </div> */}
             </div>
         </div>
     )
