@@ -1,17 +1,64 @@
 .demo-main-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
     height: 100%;
-    font-size: 3rem;
-    font-family: inter;
-    font-weight: 700;
-    letter-spacing: -0.05em;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: #e0e6f3;
+    .demo-main-left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        font-size: 3rem;
+        font-family: inter;
+        font-weight: 700;
+        letter-spacing: -0.05em;
+        flex-direction: column;
+    }
+
+    .demo-main-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        font-size: 3rem;
+        font-family: inter;
+        font-weight: 700;
+        letter-spacing: -0.05em;
+        padding: 22rem 0;
+        flex-direction: row;
+        justify-content: center;
+        align-items: start;
+    }
 
 
     .d {
+        &-pfp {
+            height: 20rem;
+            border: 3px solid #010642;
+            border-radius: 2rem;
+            margin-left: 5rem;
+        }
+        &-profile-info {
+            margin-top: 2rem;
+            margin-left: 3rem;
+            letter-spacing: inherit;
+            font-family: inherit;
+            font-weight: inherit;
+            display: flex;
+            flex-direction: column;
+        }
+        &-profile-info-text {
+            letter-spacing: inherit;
+            font-family: inherit;
+            font-weight: inherit;
+            &-small {
+                @extend .d-profile-info-text;
+                font-size: 2.4rem;
+                font-weight: 500;
+            }
+        }
         &-game {
             &-container {
                 color: black;
@@ -52,6 +99,35 @@
                 line-height: 0.6;
                 border: 1px solid #737b3c;
             }
+            &-display-text {
+                text-align: center;
+                /* margin-top: 3rem; */
+                font-family: 'retro';
+                letter-spacing: 0;
+                font-size: 4rem;
+                /* margin: 2rem 3rem; */
+                height: 11rem;
+                padding: 3rem;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                animation: textslowstrobe 0.5s linear infinite;
+            }
+
+            @keyframes textslowstrobe {
+                0% {
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 1;
+                }
+                51% {
+                    opacity: 0.5;
+                }
+                100% {
+                    opacity: 0.5;
+                }
+            }
 
             &-b {
                 // buttons
@@ -82,6 +158,9 @@
                         font-size: 2.6rem;
                         background: transparent;
                         color: #000000;
+                    }
+                    &:disabled {
+                        cursor: initial;
                     }
                 }
 
@@ -141,6 +220,13 @@
             height: 230%;
             margin-top: -3.5rem;
             margin-left: 0.6rem;
+        }
+    }
+
+    .patch-cashout {
+        &:disabled {
+            color: grey;
+            border: 1px solid grey;
         }
     }
 }
