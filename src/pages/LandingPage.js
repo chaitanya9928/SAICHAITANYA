@@ -51,9 +51,9 @@ const LandingPage = () => {
     const animateResult = (result) => {
         // result = '012';
 
-        const interval3 = 900
-        animateTo(result[0], 300, setSlot1);
-        animateTo(result[1], 600, setSlot2);
+        const interval3 = 3000
+        animateTo(result[0], 1000, setSlot1);
+        animateTo(result[1], 2000, setSlot2);
         animateTo(result[2], interval3, setSlot3);
         setTimeout(()=>{
             afterSpin();
@@ -73,7 +73,7 @@ const LandingPage = () => {
             clearTimeout(screenTextOffRef.current);
             screenTextOffRef.current = setTimeout(()=>{
                 setScreenText('');
-            }, 1000)
+            }, 1500)
         }
     }, [screenText]);
 
