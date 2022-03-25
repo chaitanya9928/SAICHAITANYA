@@ -11,9 +11,9 @@ Run `yarn start` and `node server/server` on the project root directory.
 Access the demo at `http://127.0.0.1:2000/` on your local host.
 
 -- below are the previous notes I wrote for the boilerplate -- 
-# FRONTEND SETUP FOR Boilerplate React Standalone App
+### FRONTEND SETUP FOR Boilerplate React Standalone App
 
-## This file contains meta info and some notes, checklists, logs etc about the app
+ This file contains meta info and some notes, checklists, logs etc about the app
 
 ### Checklist
 
