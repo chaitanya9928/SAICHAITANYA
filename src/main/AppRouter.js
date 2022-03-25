@@ -1,6 +1,5 @@
 import React from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
-import LandingPage from '../pages/LandingPage';
 import PageRoutes from './PageRoutes';
 
 const AppRouter = () => {
